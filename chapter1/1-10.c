@@ -12,15 +12,15 @@ int main()
     int c;
 
     while ((c = getchar()) != EOF){
-            if (c == '\t'){ /* If character is not blank then print*/
+            if (c == '\t'){ 
                 putchar('\\t');
             }
 
-            if (c == '\b'){ /* If character is blank, and the last char is not blank, print char */
+            if (c == '\b'){ 
                 putchar('\\b');
             }
 
-            if (c == '\\'){ /* If character is blank, and the last char is not blank, print char */
+            if (c == '\\'){ 
                 putchar('\\\\');
             }
 
