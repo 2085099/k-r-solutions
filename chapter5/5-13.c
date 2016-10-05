@@ -28,16 +28,17 @@ int main(int argc, char *argv[])
 {
     int i, n, lines;
     char mlines[MAXCHARS];
+    n = 0;
+
 
      for (i = 1; i < argc; i++) {
-		if (argv[i] == '-') {
+		if (*argv[i] == '-') {
 			n = atoi(argv[i]+1);
 		}
 	}
 
     if ((lines = readlines(lineptr, mlines, MAXCHARS)) >= 0) {
 		writelines(lineptr, lines, (lines > n) ? (lines - n) : 0);
-		return 0;
 
     return 0;
 }
