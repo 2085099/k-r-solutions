@@ -30,21 +30,18 @@ int main(void)
 
         else if (sscanf(s, "%s", t) == 1) {
             for (c = t; *c; c++) {
-
-
-        switch(*c)
-        {
-                case '+':
+                switch(*c){
+                    case '+':
                         push(pop()+pop());
                         break;
-                case '*':
+                    case '*':
                         push(pop()*pop());
                         break;
-                case '-':
+                    case '-':
                         op2 = pop();
                         push(pop()-op2);
                         break;
-                case '/':
+                    case '/':
                         op2 = pop();
                         if(op2 != 0.0)
                             push(pop()/op2);
@@ -53,7 +50,7 @@ int main(void)
                         break;
 
 
-                default:
+                    default:
                         printf("error: unknown command %s\n",s);
                         break;
 
